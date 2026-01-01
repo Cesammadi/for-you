@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ты...</title>
+  <link rel="stylesheet" href="bricks.css">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div id="container">
+    <h1>Ты классная потому что...</h1>
+    <div id="loveGrid">
+        <div class="brick">Ты умеешь искренне улыбаться</div>
+        <div class="brick">С тобой легко</div>
+        <div class="brick">Ты красивая без усилий</div>
+        <div class="brick">Ты умеешь слушать</div>
+        <div class="brick">Ты смешная, даже когда не стараешься</div>
+        <div class="brick">Ты настоящая</div>
+        <div class="brick">Ты умеешь быть собой</div>
+        <div class="brick">Ты делаешь обычные моменты лучше</div>
+        <div class="brick">У тебя приятный смех</div>
+        <div class="brick">Ты умная пусть и не признаешь это</div>
+        <div class="brick">С тобой не скучно</div>
+        <div class="brick">Ты внимательная</div>
+        <div class="brick">Ты заботливая</div>
+        <div class="brick">Ты умеешь радоваться мелочам</div>
+        <div class="brick">Ты умеешь быть нежной</div>
+        <div class="brick">Ты красиво смотришь</div>
+        <div class="brick">Ты классно выглядишь, даже когда думаешь, что нет</div>
+        <div class="brick">Ты умеешь быть уверенной</div>
+        <div class="brick">Ты не притворяешься</div>
+        <div class="brick">Ты умеешь вдохновлять</div>
+        <div class="brick">Ты умеешь быть разной</div>
+        <div class="brick">Ты умеешь быть уютной</div>
+        <div class="brick">Ты умеешь быть живой</div>
+        <div class="brick">Ты умеешь быть честной</div>
+        <div class="brick">Ты вызываешь желание улыбаться</div>
+        <div class="brick">Ты делаешь мой день лучше</div>
+        <div class="brick">Ты умеешь быть смешной</div>
+        <div class="brick">Ты умеешь быть серьёзной</div>
+        <div class="brick">Ты не боишься быть собой</div>
+        <div class="brick">Ты умеешь быть милой</div>
+        <div class="brick">Ты умеешь быть сильной</div>
+        <div class="brick">Ты умеешь удивлять словами</div>
+        <div class="brick">Ты умеешь удивлять поступками</div>
+        <div class="brick">Ты умеешь быть тёплой даже молча</div>
+        <div class="brick">Ты умеешь быть рядом</div>
+        <div class="brick">Ты умеешь быть комфортной</div>
+        <div class="brick">Ты умеешь быть доброй</div>
+        <div class="brick">Ты умеешь быть настоящей</div>
+        <div class="brick">Ты красиво смеёшься</div>
+        <div class="brick">Ты красиво чувствуешь</div>
+        <div class="brick">Ты умеешь быть искренней</div>
+        <div class="brick">Ты умеешь быть важной</div>
+        <div class="brick">Ты умеешь быть значимой</div>
+        <div class="brick">Ты умеешь быть особенной</div>
+        <div class="brick">Ты умеешь быть той самой</div>
+        <div class="brick">Ты вызываешь желание заботиться</div>
+        <div class="brick">Ты вызываешь желание быть лучше</div>
+        <div class="brick">Ты вызываешь желание быть рядом</div>
+        <div class="brick">Ты умеешь быть понятной</div>
+        <div class="brick">Ты умеешь быть интересной</div>
+        <div class="brick">Ты умеешь быть вдохновляющей</div>
+        <div class="brick">Ты умеешь быть светлой</div>
+        <div class="brick">Ты умеешь быть красивой по-настоящему</div>
+        <div class="brick">Ты умеешь быть редкой</div>
+        <div class="brick">Ты умеешь быть ценной</div>
+        <div class="brick">Ты умеешь быть запоминающейся</div>
+        <div class="brick">Ты умеешь быть тем, кого хочется узнать ближе</div>
+        <div class="brick">Ты умеешь быть тем, рядом с кем хорошо</div>
+        <div class="brick">Ты умеешь быть тем, кто остаётся в мыслях</div>
+        <div class="brick">Ты умеешь быть тем, кто радует</div>
+        <div class="brick">Ты умеешь быть тем, кто греет</div>
+        <div class="brick">Ты умеешь быть тем, кто вдохновляет</div>
+        <div class="brick">Ты умеешь быть тем, кто нравится</div>
+        <div class="brick">Ты умеешь быть тем, кто важен</div>
+        <div class="brick">Ты умеешь быть тем, кто классный</div>
+        <div class="brick">Потому что ты — это ты</div>
+    </div>
+  </div>
+
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const bricks = document.querySelectorAll(".brick");
+      bricks.forEach((brick, index) => {
+        setTimeout(() => {
+          brick.classList.add("visible");
+        }, index * 150); // постепенное появление кирпичиков
+      });
+    });
+  </script>
+</body>
+
+</html>

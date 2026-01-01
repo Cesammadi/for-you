@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Comfortaa', sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(145deg, #2a0000, #ff5555);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f5f6fa;
+}
+
+
+
+/* все экраны скрыты по умолчанию */
+#first_div,
+div[id^="quiz"] {
+  display: none;
+}
+
+/* карточка */
+#first_div,
+div[id^="quiz"] {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 32px 40px;
+  border-radius: 20px;
+  width: 380px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* текст */
+p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* варианты */
+label {
+  display: block;
+  text-align: left;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+label:hover {
+  opacity: 0.85;
+}
+
+input[type="radio"] {
+  margin-right: 8px;
+}
+
+/* кнопки */
+button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 12px;
+  background: #5eead4;
+  color: #0f172a;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(94, 234, 212, 0.4);
+}
+
+/* анимации */
+/* плавное появление */
+.fade-in {
+  animation: fadeInSoft 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* плавное исчезновение */
+.fade-out {
+  animation: fadeOutSoft 1s cubic-bezier(0.4, 0, 0.6, 1) forwards;
+}
+
+@keyframes fadeInSoft {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOutSoft {
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+
+/* уведомление */
+#toast {
+  position: fixed;
+  bottom: 40px;
+  background: #22c55e;
+  color: #022c22;
+  padding: 14px 26px;
+  border-radius: 14px;
+  font-weight: 500;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.4s ease;
+}
+
+#toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+#finalScreen {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #2c2f5a, #1e1f3b);
+  color: #f5f6fa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 60px 20px;
+  overflow-y: auto;
+  text-align: center;
+}
+
+#finalScreen h1 {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+#loveList {
+  list-style: none;
+  padding: 0;
+  max-width: 800px;
+  width: 100%;
+}
+
+#loveList li {
+  font-size: 18px;
+  margin: 8px 0;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  overflow: hidden;
+  max-height: 0; /* скрыт по умолчанию */
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  text-align: left;
+  padding-left: 10px;
+}
+
+#loveList li.show {
+  max-height: 100px; /* достаточно, чтобы текст помещался */
+  opacity: 1;
+}
